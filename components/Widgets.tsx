@@ -3,13 +3,13 @@ import { BiSearch } from 'react-icons/bi'
 
 const style = {
   wrapper: `flex-[1] p-4`,
-  searchBar: `flex items-center bg-[#381e27] p-2 rounded-3xl`,
+  searchBar: `flex items-center bg-[#1d1d57] p-2 rounded-3xl`,
   searchIcon: `text-[#8899a6] mr-2`,
   inputBox: `bg-transparent outline-none`,
-  section: `bg-[#381e27] my-6 rounded-xl overflow-hidden`,
+  section: `bg-[#1d1d57] my-6 rounded-xl overflow-hidden`,
   title: `p-2 font-bold text-lg`,
-  showMore: `p-2 text-[#f51b67] text-sm cursor-pointer hover:bg-[#22303c]`,
-  item: `flex items-center p-3 my-2 hover:bg-[#22303c] cursor-pointer`,
+  showMore: `p-2 text-[#059af7] text-sm cursor-pointer hover:bg-[#1a1838]`,
+  item: `flex items-center p-3 my-2 hover:bg-[#1a1838] cursor-pointer`,
   newsItemLeft: `flex-1`,
   newsItemCategory: `text-[#8899a6] text-xs font-semibold`,
   newsItemTitle: `text-sm font-bold`,

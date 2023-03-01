@@ -68,7 +68,7 @@ const Post = ({
         </div>
         <div className={style.footer}>
           <div
-            className={`${style.footerIcon} hover:text-[#f51b67] hover:bg-[#1e364a]`}
+            className={`${style.footerIcon} hover:text-[#059af7] hover:bg-[#1e364a]`}
           >
             <FaRegComment />
           </div>
@@ -83,7 +83,7 @@ const Post = ({
             <AiOutlineHeart />
           </div>
           <div
-            className={`${style.footerIcon} hover:text-[#f51b67] hover:bg-[#1e364a]`}
+            className={`${style.footerIcon} hover:text-[#059af7] hover:bg-[#1e364a]`}
           >
             <FiShare />
           </div>

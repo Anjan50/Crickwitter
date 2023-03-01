@@ -12,7 +12,7 @@ import { VscTwitter } from 'react-icons/vsc'
 import Modal from 'react-modal'
 import { customStyles } from '../lib/constants'
 import ProfileImageMinter from './profile/mintingModal/ProfileImageMinter'
-import crickwitter from '../assets/Crickwitter.png'
+import crickwitter from '../assets/front_cricklogo.gif'
 import Image from 'next/image'
 
 import {
@@ -25,7 +25,7 @@ import {
 const style = {
   wrapper: `flex-[0.7] px-8 flex flex-col`,
   twitterIconContainer: `text-3xl m-4`,
-  tweetButton: `bg-[#e00052] hover:bg-[#ff035f] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
+  tweetButton: `bg-[#00B0C8] hover:bg-[#ff035f] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
   navContainer: `flex-1`,
   profileButton: `flex items-center mb-6 cursor-pointer hover:bg-[#333c45] rounded-[100px] p-2`,
   profileLeft: `flex item-center justify-center mr-4`,
@@ -49,7 +49,7 @@ function Sidebar({ initialSelectedIcon }: SidebarProps) {
   return (
     <div className={style.wrapper}>
       <div className={style.twitterIconContainer}>
-      <Image src={crickwitter} width={166} height={66} />
+      <Image src={crickwitter} width={250} height={100} />
       </div>
       <div className={style.navContainer}>
         <SidebarOption

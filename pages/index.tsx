@@ -3,12 +3,12 @@ import { TwitterContext } from '../context/TwitterContext'
 import Feed from '../components/home/Feed'
 import Sidebar from '../components/Sidebar'
 import Widgets from '../components/Widgets'
-import metamaskLogo from '../assets/metamask.png'
+import metamaskLogo from '../assets/front_cricklogo.gif'
 import errorImg from '../assets/error.png'
 import Image from 'next/image'
 
 const style = {
-  wrapper: `flex justify-center h-screen w-screen select-none bg-[#000000] text-white`,
+  wrapper: `flex justify-center h-screen w-screen select-none bg-[#02022b] text-white`,
   content: `max-w-[1400px] w-full flex justify-between`,
   loginContainer: `w-full h-full flex flex-col justify-center items-center pb-48`,
   walletConnectButton: `text-2xl text-black bg-white font-bold mb-[-3rem] mt-[3rem] px-6 py-4 rounded-full cursor-pointer hover:bg-[#d7dbdc]`,
@@ -47,7 +47,7 @@ const Home = () => {
 
   const noUserFound = (
     <div className={style.loginContainer}>
-      <Image src={metamaskLogo} width={200} height={200} />
+      <Image src={metamaskLogo} width={500} height={200} />
       <div
         className={style.walletConnectButton}
         onClick={() => connectWallet()}
@@ -60,7 +60,7 @@ const Home = () => {
 
   const noMetaMaskFound = (
     <div className={style.loginContainer}>
-      <Image src={metamaskLogo} width={200} height={200} />
+      <Image src={metamaskLogo} width={500} height={200} />
       <div className={style.loginContent}>
         <a
           target='_blank'

@@ -6,7 +6,7 @@ import { BsStars } from 'react-icons/bs'
 
 const style = {
   wrapper: `flex-[2] border-r border-l border-[#38444d] overflow-y-scroll`,
-  header: `sticky top-0 bg-[#e00052] z-10 p-4 mb-4 flex justify-between items-center`,
+  header: `sticky top-0 bg-[#1d1d57] z-10 p-4 pt-7 pb-6 mb-4 flex justify-between items-center`,
   headerTitle: `text-xl font-bold`,
 }
 

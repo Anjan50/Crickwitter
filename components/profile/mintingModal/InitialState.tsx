@@ -10,7 +10,7 @@ const style = {
   customInput: `bg-white text-black px-3 py-1 rounded-full hover:bg-[#8899a6] cursor-pointer`,
   fileSelected: `bg-[#2b6127] text-white px-3 py-1 rounded-full hover:bg-[#8899a6] cursor-pointer`,
   lower: `flex justify-between items-center`,
-  visibility: `flex items-center text-[#f51b67] text-sm font-bold`,
+  visibility: `flex items-center text-[#059af7] text-sm font-bold`,
   visibilityText: `ml-2`,
   mintButton: `bg-white text-black px-3 py-1 rounded-full hover:bg-[#8899a6] cursor-pointer`,
   inactiveMintButton: `text-black px-3 py-1 rounded-full bg-[#8899a6]`,

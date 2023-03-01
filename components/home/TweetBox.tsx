@@ -13,11 +13,11 @@ const style = {
   profileImage: `height-12 w-12 rounded-full`,
   inputField: `w-full h-full outline-none bg-transparent text-lg`,
   formLowerContainer: `flex`,
-  iconsContainer: `text-[#f51b67] flex flex-1 items-center`,
+  iconsContainer: `text-[#059af7] flex flex-1 items-center`,
   icon: `mr-2`,
   submitGeneral: `px-6 py-2 rounded-3xl font-bold`,
-  inactiveSubmit: `bg-[#e83174] text-[#fcf0f4]`,
-  activeSubmit: `bg-[#e00052] text-white`,
+  inactiveSubmit: `bg-[#1a1838] text-[#fcf0f4]`,
+  activeSubmit: `bg-[#00B0C8] text-white`,
 }
 
 function TweetBox() {

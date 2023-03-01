@@ -82,7 +82,7 @@ export const TwitterProvider = ({ children }) => {
         name: 'Unnamed',
         isProfileImageNft: false,
         profileImage:
-          'https://about.twitter.com/content/dam/about-twitter/en/brand-toolkit/brand-download-img-1.jpg.twimg.1920.jpg',
+          'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjYzZjg1NTMxZDdhNGMyZDNiNTBmNTZlZjNhYTZlMjA4YTUwNWE0OCZjdD1n/GfPjfq77SYWEadf8fd/giphy.gif',
         walletAddress: userAddress,
       }
 
