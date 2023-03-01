@@ -14,9 +14,9 @@ const style = {
   primary: `bg-transparent outline-none font-bold`,
   secondary: `text-[#8899a6] text-xs`,
   backButton: `text-3xl cursor-pointer mr-2 rounded-full hover:bg-[#313b44] p-1`,
-  coverPhotoContainer: `flex items-center justify-center h-[15vh] overflow-hidden`,
+  coverPhotoContainer: `flex items-center justify-center h-[20vh] overflow-hidden`,
   coverPhoto: `object-cover h-full w-full`,
-  profileImageContainer: `w-full h-[6rem] rounded-full mt-[-3rem] mb-2 flex justify-start items-center px-3 flex justify-between`,
+  profileImageContainer: `w-full h-[7rem] rounded-full mt-[-2rem] mb-2 flex justify-start items-center px-3 flex justify-between`,
   profileImage: `object-cover rounded-full h-full`,
   profileImageNft: `object-cover h-full`,
   profileImageMint: `bg-white text-black px-3 py-1 rounded-full hover:bg-[#8899a6] cursor-pointer`,
@@ -63,6 +63,9 @@ const ProfileHeader = () => {
       isProfileImageNft: currentUser.isProfileImageNft,
     })
   }, [currentUser])
+
+  console.log("==========>", userData);
+  
 
   return (
     <div className={style.wrapper}>
@@ -114,8 +117,8 @@ const ProfileHeader = () => {
         </div>
       </div>
       <div className={style.nav}>
-        <div className={style.activeNav}>Tweets</div>
-        <div>Tweets & Replies</div>
+        <div className={style.activeNav}>Crickweets</div>
+        <div>Crickweets & Replies</div>
         <div>Media</div>
         <div>Likes</div>
       </div>
