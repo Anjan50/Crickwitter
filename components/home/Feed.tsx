@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { TwitterContext } from '../../context/TwitterContext'
 import TweetBox from './TweetBox'
 import Post from '../Post'

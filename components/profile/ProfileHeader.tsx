@@ -3,8 +3,6 @@ import { TwitterContext } from '../../context/TwitterContext'
 import { BsArrowLeftShort } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 import Modal from 'react-modal'
-import ProfileImageMinter from './mintingModal/ProfileImageMinter'
-import { customStyles } from '../../lib/constants'
 
 Modal.setAppElement('#__next')
 
@@ -64,8 +62,6 @@ const ProfileHeader = () => {
     })
   }, [currentUser])
 
-  console.log("==========>", userData);
-  
 
   return (
     <div className={style.wrapper}>

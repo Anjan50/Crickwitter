@@ -1,26 +1,26 @@
-import { useState, useContext } from 'react'
-import { useRouter } from 'next/router'
-import { TwitterContext } from '../context/TwitterContext'
-import SidebarOption from './SidebarOption'
-import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri'
-import { BiHash } from 'react-icons/bi'
-import { FiBell, FiMoreHorizontal } from 'react-icons/fi'
-import { HiOutlineMail, HiMail } from 'react-icons/hi'
-import { FaRegListAlt, FaHashtag, FaBell } from 'react-icons/fa'
-import { CgMoreO } from 'react-icons/cg'
-import { VscTwitter } from 'react-icons/vsc'
-import Modal from 'react-modal'
-import { customStyles } from '../lib/constants'
-import ProfileImageMinter from './profile/mintingModal/ProfileImageMinter'
-import crickwitter from '../assets/front_cricklogo.gif'
-import Image from 'next/image'
+import { useState, useContext } from "react";
+import { useRouter } from "next/router";
+import { TwitterContext } from "../context/TwitterContext";
+import SidebarOption from "./SidebarOption";
+import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from "react-icons/ri";
+import { BiHash } from "react-icons/bi";
+import { FiBell, FiMoreHorizontal } from "react-icons/fi";
+import { HiOutlineMail, HiMail } from "react-icons/hi";
+import { FaRegListAlt, FaHashtag, FaBell } from "react-icons/fa";
+import { CgMoreO } from "react-icons/cg";
+import { VscTwitter } from "react-icons/vsc";
+import Modal from "react-modal";
+import { customStyles } from "../lib/constants";
+import ProfileImageMinter from "./profile/mintingModal/ProfileImageMinter";
+import crickwitter from "../assets/front_cricklogo.gif";
+import Image from "next/image";
 
 import {
   BsBookmark,
   BsBookmarkFill,
   BsPerson,
   BsPersonFill,
-} from 'react-icons/bs'
+} from "react-icons/bs";
 
 const style = {
   wrapper: `flex-[0.7] px-8 flex flex-col`,
@@ -35,68 +35,68 @@ const style = {
   name: `text-lg`,
   handle: `text-[#8899a6]`,
   moreContainer: `flex items-center mr-2`,
-}
+};
 
 interface SidebarProps {
-  initialSelectedIcon: string
+  initialSelectedIcon: string;
 }
 
 function Sidebar({ initialSelectedIcon }: SidebarProps) {
-  const [selected, setSelected] = useState<String>(initialSelectedIcon)
-  const { currentAccount, currentUser } = useContext(TwitterContext)
-  const router = useRouter()
+  const [selected, setSelected] = useState<String>(initialSelectedIcon);
+  const { currentAccount, currentUser } = useContext(TwitterContext);
+  const router = useRouter();
 
   return (
     <div className={style.wrapper}>
       <div className={style.twitterIconContainer}>
-      <Image src={crickwitter} width={250} height={100} />
+        <Image src={crickwitter} width={250} height={100} />
       </div>
       <div className={style.navContainer}>
         <SidebarOption
-          Icon={selected === 'Home' ? RiHome7Fill : RiHome7Line}
-          text='Home'
-          isActive={Boolean(selected === 'Home')}
+          Icon={selected === "Home" ? RiHome7Fill : RiHome7Line}
+          text="Home"
+          isActive={Boolean(selected === "Home")}
           setSelected={setSelected}
-          redirect={'/'}
+          redirect={"/"}
         />
         <SidebarOption
-          Icon={selected === 'Explore' ? FaHashtag : BiHash}
-          text='NFT_Space'
-          isActive={Boolean(selected === 'Explore')}
-          setSelected={setSelected}
-        />
-        <SidebarOption
-          Icon={selected === 'Notifications' ? FaBell : FiBell}
-          text='Notifications'
-          isActive={Boolean(selected === 'Notifications')}
+          Icon={selected === "Explore" ? FaHashtag : BiHash}
+          text="NFT_Space"
+          isActive={Boolean(selected === "Explore")}
           setSelected={setSelected}
         />
         <SidebarOption
-          Icon={selected === 'Messages' ? HiMail : HiOutlineMail}
-          text='Messages'
-          isActive={Boolean(selected === 'Messages')}
+          Icon={selected === "Notifications" ? FaBell : FiBell}
+          text="Notifications"
+          isActive={Boolean(selected === "Notifications")}
           setSelected={setSelected}
         />
         <SidebarOption
-          Icon={selected === 'Bookmarks' ? BsBookmarkFill : BsBookmark}
-          text='Contest'
-          isActive={Boolean(selected === 'Bookmarks')}
+          Icon={selected === "Messages" ? HiMail : HiOutlineMail}
+          text="Messages"
+          isActive={Boolean(selected === "Messages")}
           setSelected={setSelected}
         />
         <SidebarOption
-          Icon={selected === 'Lists' ? RiFileList2Fill : FaRegListAlt}
-          text='Tickets'
-          isActive={Boolean(selected === 'Lists')}
+          Icon={selected === "Bookmarks" ? BsBookmarkFill : BsBookmark}
+          text="Contest"
+          isActive={Boolean(selected === "Bookmarks")}
           setSelected={setSelected}
         />
         <SidebarOption
-          Icon={selected === 'Profile' ? BsPersonFill : BsPerson}
-          text='Profile'
-          isActive={Boolean(selected === 'Profile')}
+          Icon={selected === "Lists" ? RiFileList2Fill : FaRegListAlt}
+          text="Tickets"
+          isActive={Boolean(selected === "Lists")}
           setSelected={setSelected}
-          redirect={'/profile'}
         />
-        <SidebarOption Icon={CgMoreO} text='More' />
+        <SidebarOption
+          Icon={selected === "Profile" ? BsPersonFill : BsPerson}
+          text="Profile"
+          isActive={Boolean(selected === "Profile")}
+          setSelected={setSelected}
+          redirect={"/profile"}
+        />
+        <SidebarOption Icon={CgMoreO} text="More" />
         <div
           onClick={() =>
             router.push(`${router.pathname}/?mint=${currentAccount}`)
@@ -110,7 +110,7 @@ function Sidebar({ initialSelectedIcon }: SidebarProps) {
         <div className={style.profileLeft}>
           <img
             src={currentUser.profileImage}
-            alt='profile'
+            alt="profile"
             className={
               currentUser.isProfileImageNft
                 ? `${style.profileImage} smallHex`
@@ -139,7 +139,7 @@ function Sidebar({ initialSelectedIcon }: SidebarProps) {
         <ProfileImageMinter />
       </Modal>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
